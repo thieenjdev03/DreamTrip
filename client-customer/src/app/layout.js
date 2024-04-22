@@ -1,4 +1,5 @@
 import "./globals.css";
+import "../styles/main.css";
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
