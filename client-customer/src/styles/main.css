@@ -1,8 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-.Header{ 
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+.PrimaryButton {
+    background-color: #034c8c;
+    border-radius: 8px;
+    color: white;
+    font-weight: 400;
+}
+.PrimaryButton:hover {
+    opacity: 80%;
+}
+.Header {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -10,27 +22,91 @@
     padding: 10px;
     width: 100%;
 }
-.Header_NavBar{
+.Header_NavBar {
     display: flex;
     flex-direction: row;
     width: 75%;
     border-bottom: 1px solid #ccc;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-.Header_NavItem{ 
+.Header_NavItem {
     min-width: 100px;
     height: 40px;
     text-align: center;
     line-height: 40px;
     font-weight: 500;
-
 }
-.Header_Logo{
+.Header_Logo {
     font-style: bold;
     font-size: 30px;
     font-style: Roboto;
 }
-.Header_NavItem:hover{ 
+.Header_NavItem:hover {
     font-style: bold;
     font-weight: 700;
+}
+
+.wrapper {
+    background-image: url(../../public/BackgroundGadientTopDown.png);
+    background-repeat: repeat-x;
+    width: auto;
+    min-height: 100vh;
+}
+.BgHero {
+    background-image: url("../../public/bgHero.png");
+    width: auto;
+    height: auto;
+    background-repeat: no-repeat;
+}
+
+.textSection_PrimaryText {
+    font-size: 56px;
+    font-weight: bold;
+    max-width: 703px;
+    min-height: 140px;
+}
+.textSection_SubText {
+    font-size: 24px;
+    min-width: 100%;
+    color: #333333;
+}
+.EmailVoucherLabel {
+    color: #334e68;
+    font-weight: 700;
+}
+.EmailVoucherInput {
+    border: #333333 solid 1px;
+    border-radius: 10px;
+    min-width: 340px;
+    min-height: 44px;
+}
+
+.MainServicesContent {
+    background: url("../../public/backgroundServicesContent.png") no-repeat;
+    min-height: 300px;
+    min-width: 1132px;
+}
+.topMainServicesContent {
+    top: -50px;
+}
+.serviceItem {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.serviceItem:hover {
+    background-color: #fff;
+    border: solid black 1px;
+}
+.suggestLocationList {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.LocationList {
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.LocationItem {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #f0f0f0;
 }
