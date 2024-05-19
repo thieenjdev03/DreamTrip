@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import topBackgroundServicesContent from "../../public/topBackgroundServicesContent.png";
+import topBackgroundServicesContent from "../../../public/topBackgroundServicesContent.png";
 function ServicesSection(props) {
   const [serviceSelected, setServiceSelected] = useState("SuggestTrip");
   return (

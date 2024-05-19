@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-function LocationItem(props) {
+function LocationItem() {
   const locationList = [
     {
       id: 1,
@@ -37,31 +37,35 @@ function LocationItem(props) {
   ];
 
   return (
-    <div className="flex gap-4 items-center justify-center">
-      {locationList.map((locationItem) => {
-        return (
-          <div className="LocationItem flex flex-col rounded-2xl h-full px-2">
-            <Image
-              src={locationItem.imageUrl}
-              width={264}
-              height={180}
-              alt=""
-            ></Image>
-            <div className="textSection  px-2">
-              <div className="Item_LocationOnMap">
-                <i>+</i>
-                <span>{locationItem.name}</span>
-              </div>
-              <div className="Item_Location_Day1_title">{locationItem.day}</div>
-              <div className="Item_Location_Day1_CounterPlace">
-                {locationItem.counterPlace}
-              </div>
-              <div className="Item_Location_Day1_PricePerDay">
-                {locationItem.pricePerDay}
+    <div className="flex gap-4 w-11/12 items-center justify-center">
+      {locationList.map((locationItem, key) => {
+        if (key < 4) {
+          return (
+            <div className="LocationItem w-1/4 flex flex-col rounded-2xl h-full">
+              <Image
+                src={locationItem.imageUrl}
+                width={270}
+                height={180}
+                alt=""
+              ></Image>
+              <div className="textSection px-4 flex flex-col gap-1">
+                <div className="Item_LocationOnMap">
+                  <i>+</i>
+                  <span>{locationItem.name}</span>
+                </div>
+                <div className="Item_Location_Day1_title">
+                  {locationItem.day}
+                </div>
+                <div className="Item_Location_Day1_CounterPlace">
+                  {locationItem.counterPlace}
+                </div>
+                <div className="Item_Location_Day1_PricePerDay">
+                  {locationItem.pricePerDay}
+                </div>
               </div>
             </div>
-          </div>
-        );
+          );
+        }
       })}
     </div>
   );

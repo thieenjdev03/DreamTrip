@@ -5,6 +5,9 @@
     box-sizing: border-box;
     margin: 0;
 }
+.MainShadowBox {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 .PrimaryButton {
     background-color: #034c8c;
     border-radius: 8px;
@@ -25,10 +28,11 @@
 .Header_NavBar {
     display: flex;
     flex-direction: row;
-    width: 75%;
+    width: fit-content;
     border-bottom: 1px solid #ccc;
     background-color: #ffffff;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    padding: 4px 60px;
 }
 .Header_NavItem {
     min-width: 100px;
@@ -45,6 +49,9 @@
 .Header_NavItem:hover {
     font-style: bold;
     font-weight: 700;
+    transform: scale(1.1);
+    transition: all;
+    cursor: pointer;
 }
 
 .wrapper {
@@ -55,7 +62,7 @@
 }
 .BgHero {
     background-image: url("../../public/bgHero.png");
-    width: auto;
+    width: 100%;
     height: auto;
     background-repeat: no-repeat;
 }
@@ -84,8 +91,8 @@
 
 .MainServicesContent {
     background: url("../../public/backgroundServicesContent.png") no-repeat;
-    min-height: 300px;
-    min-width: 1132px;
+    min-height: 320px;
+    min-width: 1140px;
 }
 .topMainServicesContent {
     top: -50px;
@@ -99,14 +106,50 @@
 }
 .suggestLocationList {
     width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    min-height: 340px;
+}
+.suggestLocationList_title {
+    color: #333333;
+    font-size: 24px;
+    font-weight: 700;
+    text-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.suggestLocationList_subTitle {
+    font-size: 16px;
+    font-weight: 400;
 }
 .LocationList {
-    width: 90%;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 30px;
 }
 
 .LocationItem {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-color: #f0f0f0;
+    height: 100%;
+    padding: 8px 4px;
+}
+
+.Item_LocationOnMap {
+    color: #8f8f8f;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.Item_Location_Day1_title {
+    font-weight: bold;
+    font-size: 20px;
+}
+.Item_Location_Day1_CounterPlace {
+    color: grey;
+    font-weight: 600;
+}
+.LocationItem img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+}
+.Item_Location_Day1_PricePerDay {
+    font-size: large;
+    font-weight: 500;
+    color: darkblue;
 }

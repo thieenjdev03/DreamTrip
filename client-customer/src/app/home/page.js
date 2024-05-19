@@ -4,13 +4,14 @@ import React from "react";
 import Image from "next/image";
 import peopleHero from "../../../public/peopleHero.png";
 import downloadAppBanner from "../../../public/downloadAppBanner.png";
-import ServicesSection from "../../components/servicesSection";
-import SuggestLocationList from "../../components/suggestLocationList";
+import ServicesSection from "../../components/Homepage/servicesSection";
+import SuggestLocationList from "../../components/Homepage/suggestLocationList";
+import ForeignTravel from "@/components/Homepage/ForeignTravel";
 function page(props) {
   return (
     <div className="wrapper flex flex-col gap-10 justify-center items-center">
       <Header></Header>
-      <div className="BannerLandingPage min-h-[680px] flex flex-row justify-center items-center px-20 ">
+      <div className="BannerLandingPage max-h-[680px] flex flex-row justify-center items-center px-20 w-11/12 ">
         <div className="BannerLandingPage_Left flex flex-col gap-4 w-3/5 h-full">
           <div className="Left_textSection  min-h-[220px]">
             <div className="textSection_PrimaryText">
@@ -60,6 +61,7 @@ function page(props) {
       </div>
       <ServicesSection></ServicesSection>
       <SuggestLocationList></SuggestLocationList>
+      <ForeignTravel></ForeignTravel>
     </div>
   );
 }
