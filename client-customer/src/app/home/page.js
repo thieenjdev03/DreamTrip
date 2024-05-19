@@ -61,6 +61,7 @@ function page(props) {
       </div>
       <ServicesSection></ServicesSection>
       <SuggestLocationList></SuggestLocationList>
+      <SuggestLocationList></SuggestLocationList>
       <ForeignTravel></ForeignTravel>
     </div>
   );
